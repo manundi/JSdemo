@@ -1,16 +1,27 @@
-Koirat ei ole kissoja, mutta kissat on.
+<head>
+    <title>Klikkailu</title>  
+</head>
 
-
-<button type="button" onclick="Klikkaus()" >Klikkaa Mua!</button>
-<h1>Koirat </h1>
-<script>
-    let klikkaukset = 0
-    function Klikkaus(){
-    klikkaukset++
-        if(klikkaukset > 50){
-            alert("LOPETA")
-        }
-    }
-
+<body>
+    Koirat ei ole kissoja, mutta kissat on.
+    <h1>Koirat </h1>
+    <img onclick="Painanta()" src="munankuvaehja.png" id="munakuva" width="500">
+    <p>Koirat on <p id="numero"> 0 </p> kertaa tyhmempiä kuin kissat</p>
     
-</script>
+    <script>
+
+        let klikkaukset = 0
+        function Painanta(){
+            klikkaukset++
+            document.getElementById("numero").innerHTML = klikkaukset
+
+            if(klikkaukset > 5){
+                document.getElementById("munakuva").src = "munakuvarikki.png"
+                alert("LOPETA")
+            }
+        } 
+    </script>
+</body>
+
+
+
